@@ -1,0 +1,23 @@
+# Data
+data/
+*.parquet
+*.csv
+
+# Models / artifacts
+*.pkl
+*.joblib
+
+# Python cache
+__pycache__/
+*.pyc
+
+# MLflow
+mlflow/
+mlruns/
+
+# OS
+.DS_Store
+
+# Env
+.env
+.venv
