@@ -19,6 +19,11 @@ Evaluation performed on 15,549 shipments.
 Overall Accuracy: 58%
 The model performs well at detecting delayed shipments, which is useful for identifying delivery risk.
 
+## Model Improvement (XGBoost)
+To improve the baseline Logistic Regression model, I implemented a more advanced approach using SMOTE and XGBoost.
+The dataset had class imbalance, so SMOTE (Synthetic Minority Oversampling Technique) was used to balance the training data. After balancing the dataset, an XGBoost classifier was trained to capture more complex relationships in the shipment features.
+Hyperparameter tuning was performed using RandomizedSearchCV to find the best model parameters. This improved model provides better learning capability compared to the baseline model and demonstrates a more production-oriented machine learning workflow.
+
 ## API Prediction 
 
 ##### Request:
@@ -82,3 +87,4 @@ The model performs well at detecting delayed shipments, which is useful for iden
 - FastAPI
 - SMOTE
 - Git / GitHub
+
