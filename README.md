@@ -3,3 +3,82 @@
 This project builds a machine learning system to predict shipment delays using historical logistics data. The goal is to help supply chain teams identify shipments that are likely to be delayed so they can take proactive action.
 The project demonstrates a complete ML workflow including data pipelines, feature engineering, model training, evaluation, and API deployment.
 
+## Problem
+Shipment delays can disrupt logistics operations and affect delivery reliability. By analyzing historical shipment data, we can train a model that predicts delay risk and supports better operational planning.
+
+## Project Highlights
+- End-to-end machine learning pipeline
+- Feature engineering for shipment data
+- Baseline model using Logistic Regression
+- Improved model using SMOTE + XGBoost
+- Hyperparameter tuning with RandomizedSearchCV
+- Real-time prediction API using FastAPI
+
+## Model Results (Baseline)
+Evaluation performed on 15,549 shipments.
+Overall Accuracy: 58%
+The model performs well at detecting delayed shipments, which is useful for identifying delivery risk.
+
+## API Prediction 
+
+##### Request:
+{
+  "payment_type": "DEBIT",
+  "profit_per_order": 34.448338,
+  "sales_per_customer": 92.49099,
+  "category_id": 9.0,
+  "category_name": "Cardio Equipment",
+  "customer_city": "Caguas",
+  "customer_country": "Puerto Rico",
+  "customer_id": 12097.683,
+  "customer_segment": "Consumer",
+  "customer_state": "PR",
+  "customer_zipcode": 725.0,
+  "department_id": 3.0,
+  "department_name": "Footwear",
+  "latitude": 18.359064,
+  "longitude": -66.370575,
+  "market": "Europe",
+  "order_city": "Viena",
+  "order_country": "Austria",
+  "order_customer_id": 12073.336,
+  "order_date": "2015-08-12 00:00:00+01:00",
+  "order_id": 15081.289,
+  "order_item_cardprod_id": 191.0,
+  "order_item_discount": 12.623338,
+  "order_item_discount_rate": 0.13,
+  "order_item_id": 38030.996,
+  "order_item_product_price": 99.99,
+  "order_item_profit_ratio": 0.41,
+  "order_item_quantity": 1.0,
+  "sales": 99.99,
+  "order_item_total_amount": 84.99157,
+  "order_profit_per_order": 32.083145,
+  "order_region": "Western Europe",
+  "order_state": "Vienna",
+  "order_status": "COMPLETE",
+  "product_card_id": 191.0,
+  "product_category_id": 9.0,
+  "product_name": "Nike Men's Free 5.0+ Running Shoe",
+  "product_price": 99.99,
+  "shipping_date": "2015-08-13 00:00:00+01:00",
+  "shipping_mode": "Standard Class",
+  "ship_year": 2015,
+  "ship_month": 8,
+  "ship_dayofweek": 3
+}
+
+##### Response:
+{
+  "prediction": 1,
+  "probability_delay": 0.1971648178573689
+}
+
+## Tech Stack
+- Python
+- Pandas
+- Scikit-Learn
+- XGBoost
+- FastAPI
+- SMOTE
+- Git / GitHub
