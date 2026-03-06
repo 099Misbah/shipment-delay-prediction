@@ -7,7 +7,7 @@ model = joblib.load(MODEL_PATH)
 
 def _get_feature_cols():
     """
-    Pull the exact columns the trained preprocessor expects.
+    Pull the exact columns the trained preprocessor expects.....
     Works because your model is a Pipeline: ("prep", ColumnTransformer) -> ("model", estimator)
     """
     prep = model.named_steps["prep"]
