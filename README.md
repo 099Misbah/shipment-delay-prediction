@@ -1,4 +1,7 @@
 # Shipment Delay Prediction System
+
+## 📊 Live Tableau Dashboard https://public.tableau.com/views/ShipmentDelayPredictionMLAnalyticsDashboard/ShipmentDelayAnalysis
+
 ## Overview
 This project builds a machine learning system to predict shipment delays using historical logistics data. The goal is to help supply chain teams identify shipments that are likely to be delayed so they can take proactive action.
 The project demonstrates a complete ML workflow including data pipelines, feature engineering, model training, evaluation, and API deployment.
@@ -13,6 +16,8 @@ Shipment delays can disrupt logistics operations and affect delivery reliability
 - Improved model using SMOTE + XGBoost
 - Hyperparameter tuning with RandomizedSearchCV
 - Real-time prediction API using FastAPI
+- Interactive Tableau dashboard with 4 analytical views
+- Data export pipeline generating dashboard-ready CSV datasets
 
 ## Model Results (Baseline)
 Evaluation performed on 15,549 shipments.
@@ -78,6 +83,16 @@ Hyperparameter tuning was performed using RandomizedSearchCV to find the best mo
   "prediction": 1,
   "probability_delay": 0.1971648178573689
 }
+## Tableau Dashboard
+
+Interactive 4-dashboard analytics suite:
+
+| Dashboard | What It Shows |
+|-----------|--------------|
+| Executive Overview | Shipment KPIs, delay rate by market, monthly trend |
+| Model Performance | Baseline vs XGBoost side-by-side comparison |
+| Prediction Insights | XGBoost feature importance, prediction distribution |
+| Business Impact | Delay patterns by segment, shipping mode, market |
 
 ## Tech Stack
 - Python
@@ -87,4 +102,6 @@ Hyperparameter tuning was performed using RandomizedSearchCV to find the best mo
 - FastAPI
 - SMOTE
 - Git / GitHub
+- Tableau Public (dashboard)
+
 
